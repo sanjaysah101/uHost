@@ -7,9 +7,13 @@ body {
 }
 
 .main-header {
-  width: 100%;
   background-color: #2ddf5c;
+  left: 0;
   padding: 8px 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .main-header > div {
@@ -19,9 +23,9 @@ body {
 
 .main-header__brand {
   color: #0e4f1f;
-  text-decoration: none;
-  font-weight: bold;
   font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
 }
 .main-nav {
   display: inline-block;
