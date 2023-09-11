@@ -26,6 +26,11 @@ body {
   font-size: 22px;
   font-weight: bold;
   text-decoration: none;
+  height: 22px;
+  display: inline-block;
+}
+.main-header__brand img{
+  height: 100%;
 }
 .main-nav {
   display: inline-block;

@@ -1,6 +1,6 @@
 
 #product-overview {
-  background-image: url("../images/freedom.jpg");
+  background: url("../images/freedom.jpg") left 10% bottom 20%/cover no-repeat border-box;
   height: 528px;
   margin-top: 43px;
   padding: 10px;
@@ -110,6 +110,7 @@
   border: 2px solid #424242;
   border-radius: 50%;
   margin: auto;
+  padding: 20px;
 }
 
 .key-feature__description {
