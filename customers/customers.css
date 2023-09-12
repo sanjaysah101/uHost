@@ -6,24 +6,18 @@ main {
   font-size: 1.2rem;
 }
 
-/* .testimonial__list {
-  width: 80%;
-  margin: auto;
-} */
-
-/* .testimonial:first-of-type {
-  margin-top: 6rem;
-} */
-
 .testimonial__image-container {
   width: 100%;
   max-width: 40rem;
   box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
+  transform: skew(20deg);
+  overflow: hidden;
 }
 
 .testimonial__image {
   width: 100%;
   vertical-align: top;
+  transform: skew(-20deg) scale(1.4);
 }
 
 .testimonial__info {
