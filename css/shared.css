@@ -4,6 +4,11 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+main {
+  min-height: calc(100vh - 3.5rem - 8rem);
+  margin-top: 3.5rem;
 }
 
 .main-header {
@@ -45,10 +50,10 @@ body {
 
 .main-header__brand {
   color: #0e4f1f;
-  font-size: 22px;
+  /* font-size: 22px; */
   font-weight: bold;
   text-decoration: none;
-  height: 22px;
+  height: 2.5rem;
   display: inline-block;
   vertical-align: middle;
 }
@@ -195,4 +200,16 @@ body {
 
 .mobile-nav__item a {
   font-size: 1.5rem;
+}
+
+@media (min-width: 40rem) {
+  .toggle-button {
+    display: none;
+  }
+  .main-nav {
+    display: inline-block;
+    text-align: right;
+    width: calc(100% -44px);
+    vertical-align: middle;
+  }
 }
