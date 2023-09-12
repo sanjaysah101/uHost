@@ -150,7 +150,7 @@
     width: 30%;
     max-width: 25rem;
   }
-  .key-feature__list{
+  .key-feature__list {
     display: flex;
     justify-content: center;
   }
@@ -158,7 +158,9 @@
 
 .modal {
   position: fixed;
-  display: none;
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: opacity 200ms ease-out, transform 500ms ease-out;
   z-index: 200;
   top: 20%;
   left: 30%;

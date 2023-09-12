@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,900');
-@import url('https://fonts.googleapis.com/css?family=Anton');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400,900");
+@import url("https://fonts.googleapis.com/css?family=Anton");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
 * {
   box-sizing: border-box;
@@ -19,12 +19,14 @@ main {
 .backdrop {
   position: fixed;
   display: none;
+  opacity: 0;
   top: 0;
   left: 0;
   z-index: 100;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s linear;
 }
 
 .main-header {
@@ -102,6 +104,10 @@ main {
 .main-nav__item a:active {
   color: white;
   border-bottom: 5px solid white;
+}
+
+.main-nav__item--cta {
+  animation: wiggle 400ms 3s 8 ease-out none;
 }
 
 .main-nav__item--cta a,
@@ -217,10 +223,12 @@ main {
   border: #a1a1a1;
   background: #ccc;
   color: #a1a1a1;
-} 
+}
 
 .open {
-    display: block !important;
+  display: block !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 @media (min-width: 40rem) {
@@ -231,5 +239,17 @@ main {
   .main-footer__links {
     flex-direction: row;
     justify-content: center;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateZ(10deg);
   }
 }

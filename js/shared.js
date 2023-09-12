@@ -7,24 +7,34 @@ const mobileNav = document.querySelector(".mobile-nav");
 
 selectPlanButtons.forEach((selectPlanButton) => {
   selectPlanButton.addEventListener("click", () => {
-    modal.style.display = "block";
+    modal.classList.add("open");
     backdrop.style.display = "block";
+    setTimeout(() => {
+      backdrop.classList.add("open");
+    }, 10);
   });
 });
 
 const closeModal = () => {
-  if (modal) modal.style.display = "none";
-  backdrop.style.display = "none";
+  if (modal) modal.classList.remove("open");
+
+  backdrop.classList.remove("open");
+  setTimeout(() => {
+    backdrop.style.display = "none";
+  }, 200);
 };
 
 backdrop.addEventListener("click", () => {
-  mobileNav.style.display = "none";
+  mobileNav.classList.remove("open");
   closeModal();
 });
 
 if (modalNoButton) modalNoButton.addEventListener("click", closeModal);
 
 toggleButton.addEventListener("click", () => {
-  mobileNav.style.display = "block";
+  mobileNav.classList.add("open");
   backdrop.style.display = "block";
+  setTimeout(()=>{
+    backdrop.classList.add("open");
+  }, 10);
 });
